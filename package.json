@@ -1,0 +1,16 @@
+{
+  "name": "gee-note",
+  "version": "1.0.0",
+  "description": "gee-note",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "author": "hcgee",
+  "license": "ISC",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.36"
+  }
+}
