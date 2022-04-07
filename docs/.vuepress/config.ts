@@ -21,6 +21,7 @@ export default defineUserConfig<DefaultThemeOptions>({
           "/react/virtual.md",
           "/react/portals.md",
           "/react/fragments.md",
+          "/react/hooks.md",
         ],
       },
       {
@@ -30,6 +31,10 @@ export default defineUserConfig<DefaultThemeOptions>({
       {
         text: "ES6",
         link: "/es6/es6",
+      },
+      {
+        text: "webpack",
+        link: "/webpack/webpack",
       },
       {
         text: "Redux",
@@ -53,6 +58,10 @@ export default defineUserConfig<DefaultThemeOptions>({
       {
         text: "ES6",
         link: "/es6/es6",
+      },
+      {
+        text: "webpack",
+        link: "/webpack/webpack",
       },
       {
         text: "Redux",
