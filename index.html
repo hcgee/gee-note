@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function fn(a, b, c) {
+      console.log(this.name);
+      console.log(a, b, c);
+      return {
+        a, b, c
+      }
+    }
+
+    let obj = {
+      name: 'huhanchi'
+    }
+
+    Function.prototype.myBind = function (obj) {
+      let that = this
+      obj = obj || window;
+      // 不要第一个参数
+      let args1 = Array.prototype.slice.call(arguments, 1);
+      return function () {
+        return that.apply(obj, [...args1, ...arguments])
+      };
+    };
+
+    let res = fn.myBind(obj, [1, 2, 3], 2)
+    let r = res(2)
+    console.log(r);
+  </script>
+</body>
+
+</html>

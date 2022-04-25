@@ -1,3 +1,9 @@
+/*
+ * @Author: huhanchi 
+ * @Date: 2022-04-24 13:22:52 
+ * @Last Modified by: huhanchi
+ * @Last Modified time: 2022-04-24 13:27:02
+ */
 import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
 
@@ -5,8 +11,8 @@ export default defineUserConfig<DefaultThemeOptions>({
   base: "/gee-note/",
   // 站点配置
   lang: "zh-CN",
-  title: "老汉随便记记",
-  description: "老汉前端学习笔记",
+  title: "前端学习笔记",
+  description: "前端学习笔记",
 
   // 主题和它的配置
   theme: "@vuepress/theme-default",
@@ -25,10 +31,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         ],
       },
       {
-        text: "Vue",
-        link: "/vue/vue",
-      },
-      {
         text: "ES6",
         link: "/es6/es6",
       },
@@ -37,13 +39,22 @@ export default defineUserConfig<DefaultThemeOptions>({
         link: "/webpack/webpack",
       },
       {
-        text: "Redux",
-        link: "/redux/redux",
-      },
-      {
-        text: "其他",
+        text: "面试",
         collapsible: true,
-        children: [],
+        children: [
+          {
+            text: "原型与原型链",
+            link: "/ms/01",
+          },
+          {
+            text: "防抖与节流",
+            link: "/ms/02",
+          },
+          {
+            text: "call,apply和bind",
+            link: "/ms/03",
+          },
+        ],
       },
     ],
     navbar: [
@@ -52,10 +63,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         link: "/react/react",
       },
       {
-        text: "Vue",
-        link: "/vue/vue",
-      },
-      {
         text: "ES6",
         link: "/es6/es6",
       },
@@ -64,12 +71,21 @@ export default defineUserConfig<DefaultThemeOptions>({
         link: "/webpack/webpack",
       },
       {
-        text: "Redux",
-        link: "/redux/redux",
-      },
-      {
-        text: "其他",
-        children: [],
+        text: "面试",
+        children: [
+          {
+            text: "原型与原型链",
+            link: "/ms/01",
+          },
+          {
+            text: "防抖与节流",
+            link: "/ms/02",
+          },
+          {
+            text: "call,apply和bind",
+            link: "/ms/03",
+          },
+        ],
       },
     ],
   },
