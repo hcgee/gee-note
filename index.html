@@ -10,31 +10,17 @@
 
 <body>
   <script>
-    function fn(a, b, c) {
-      console.log(this.name);
-      console.log(a, b, c);
-      return {
-        a, b, c
+    function fn() {
+      let a = 1
+      return function () {
+        a = a + 1
+        return a
       }
     }
-
-    let obj = {
-      name: 'huhanchi'
-    }
-
-    Function.prototype.myBind = function (obj) {
-      let that = this
-      obj = obj || window;
-      // 不要第一个参数
-      let args1 = Array.prototype.slice.call(arguments, 1);
-      return function () {
-        return that.apply(obj, [...args1, ...arguments])
-      };
-    };
-
-    let res = fn.myBind(obj, [1, 2, 3], 2)
-    let r = res(2)
-    console.log(r);
+    let fn1 = fn()
+    let f1 = fn1()
+    let f2 = fn1()
+    console.log(f1, f2); // 2,3
   </script>
 </body>
 

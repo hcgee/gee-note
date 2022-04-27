@@ -31,15 +31,11 @@ export default defineUserConfig<DefaultThemeOptions>({
         ],
       },
       {
-        text: "ES6",
-        link: "/es6/es6",
-      },
-      {
         text: "webpack",
         link: "/webpack/webpack",
       },
       {
-        text: "面试",
+        text: "基础",
         collapsible: true,
         children: [
           {
@@ -54,6 +50,26 @@ export default defineUserConfig<DefaultThemeOptions>({
             text: "call,apply和bind",
             link: "/ms/03",
           },
+          {
+            text: "闭包",
+            link: "/ms/04",
+          },
+          {
+            text: "居中对齐",
+            link: "/ms/05",
+          },
+          {
+            text: "高阶函数",
+            link: "/ms/06",
+          },
+          {
+            text: "Promise",
+            link: "/ms/07",
+          },
+          {
+            text: "typeof与instanceof",
+            link: "/ms/08",
+          },
         ],
       },
     ],
@@ -63,15 +79,11 @@ export default defineUserConfig<DefaultThemeOptions>({
         link: "/react/react",
       },
       {
-        text: "ES6",
-        link: "/es6/es6",
-      },
-      {
         text: "webpack",
         link: "/webpack/webpack",
       },
       {
-        text: "面试",
+        text: "基础",
         children: [
           {
             text: "原型与原型链",
@@ -84,6 +96,26 @@ export default defineUserConfig<DefaultThemeOptions>({
           {
             text: "call,apply和bind",
             link: "/ms/03",
+          },
+          {
+            text: "闭包",
+            link: "/ms/04",
+          },
+          {
+            text: "居中对齐",
+            link: "/ms/05",
+          },
+          {
+            text: "高阶函数",
+            link: "/ms/06",
+          },
+          {
+            text: "Promise",
+            link: "/ms/07",
+          },
+          {
+            text: "typeof与instanceof",
+            link: "/ms/08",
           },
         ],
       },
