@@ -2,7 +2,7 @@
  * @Author: huhanchi 
  * @Date: 2022-04-24 13:22:52 
  * @Last Modified by: huhanchi
- * @Last Modified time: 2022-04-24 13:27:02
+ * @Last Modified time: 2022-04-28 14:55:56
  */
 import { defineUserConfig } from "vuepress";
 import type { DefaultThemeOptions } from "vuepress";
@@ -55,11 +55,11 @@ export default defineUserConfig<DefaultThemeOptions>({
             link: "/ms/04",
           },
           {
-            text: "居中对齐",
+            text: "水平居中对齐",
             link: "/ms/05",
           },
           {
-            text: "高阶函数",
+            text: "数组的方法",
             link: "/ms/06",
           },
           {
@@ -69,6 +69,10 @@ export default defineUserConfig<DefaultThemeOptions>({
           {
             text: "typeof与instanceof",
             link: "/ms/08",
+          },
+          {
+            text: "数组去重",
+            link: "/ms/09",
           },
         ],
       },
@@ -102,11 +106,11 @@ export default defineUserConfig<DefaultThemeOptions>({
             link: "/ms/04",
           },
           {
-            text: "居中对齐",
+            text: "水平居中对齐",
             link: "/ms/05",
           },
           {
-            text: "高阶函数",
+            text: "数组的方法",
             link: "/ms/06",
           },
           {
@@ -116,6 +120,10 @@ export default defineUserConfig<DefaultThemeOptions>({
           {
             text: "typeof与instanceof",
             link: "/ms/08",
+          },
+          {
+            text: "数组去重",
+            link: "/ms/09",
           },
         ],
       },

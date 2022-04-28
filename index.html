@@ -10,17 +10,31 @@
 
 <body>
   <script>
-    function fn() {
-      let a = 1
-      return function () {
-        a = a + 1
-        return a
+    Array.prototype.MyIndexOf = function (value, findIndex = 0) {
+      let index = -1
+      if (findIndex >= this.length) {
+        return -1;
       }
+
+      if (findIndex < 0) {
+        findIndex = findIndex + this.length
+        findIndex = findIndex < 0 ? 0 : findIndex
+      }
+
+      for (let i = findIndex; i < this.length; i++) {
+        if (value == this[i]) {
+          index = i
+          break
+        }
+      }
+
+      return index;
     }
-    let fn1 = fn()
-    let f1 = fn1()
-    let f2 = fn1()
-    console.log(f1, f2); // 2,3
+
+    const a = [1, 2, 3, 4, 5]
+    let res = a.MyIndexOf(2,-3);
+    console.log(res);
+
   </script>
 </body>
 
