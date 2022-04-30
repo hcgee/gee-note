@@ -10,31 +10,73 @@
 
 <body>
   <script>
-    Array.prototype.MyIndexOf = function (value, findIndex = 0) {
-      let index = -1
-      if (findIndex >= this.length) {
-        return -1;
-      }
+    // Array.prototype.values === Array.prototype[Symbol.iterator]  // true 
+    Array.prototype.MyJoin = function (separator = ',') {
+      console.log('separator', separator);
+      console.log(this.toString().replace(',', separator));
+    };
 
-      if (findIndex < 0) {
-        findIndex = findIndex + this.length
-        findIndex = findIndex < 0 ? 0 : findIndex
-      }
+    var arr = ['a', 'b', 'c'];
+    arr.MyJoin('')
+    // console.log(arr.MyJoin());
 
-      for (let i = findIndex; i < this.length; i++) {
-        if (value == this[i]) {
-          index = i
-          break
-        }
-      }
 
-      return index;
+
+
+
+    const a = 1, // number
+      b = 1.2, // number
+      c = 'str', // string
+      d = null, // null
+      e = undefined, // undefined
+      f = {}, // object
+      g = () => { }, // function
+      h = Symbol("symbol"), // symbol
+      i = new Date, // Date
+      j = new RegExp(), // RegExp
+      k = [], // array
+      l = true; // boolean
+
+    function typeCheck(value) {
+      return typeof value;
+    }
+    console.log(typeCheck(a), type(a), objTypeCheck(a)) // number
+    console.log(typeCheck(b), type(b), objTypeCheck(b)) // number
+    console.log(typeCheck(c), type(c), objTypeCheck(c)) // number
+    console.log(typeCheck(d), type(d), objTypeCheck(d)) // object
+    console.log(typeCheck(e), type(e), objTypeCheck(e)) // undefined
+    console.log(typeCheck(f), type(f), objTypeCheck(f)) // object
+    console.log(typeCheck(g), type(g), objTypeCheck(g)) // function
+    console.log(typeCheck(h), type(h), objTypeCheck(h)) // symbol
+    console.log(typeCheck(i), type(i), objTypeCheck(i)) // object
+    console.log(typeCheck(j), type(j), objTypeCheck(j)) // object
+    console.log(typeCheck(k), type(k), objTypeCheck(k)); // object
+    console.log(typeCheck(l), type(l), objTypeCheck(l)); // boolean
+
+
+    function objTypeCheck(value) {
+      return Object.prototype.toString.call(value).slice()
     }
 
-    const a = [1, 2, 3, 4, 5]
-    let res = a.MyIndexOf(2,-3);
-    console.log(res);
+    function type(obj, fullClass) {
 
+      // get toPrototypeString() of obj (handles all types)
+      // Early JS environments return '[object Object]' for null, so it's best to directly check for it.
+      if (fullClass) {
+        return (obj === null) ? '[object Null]' : Object.prototype.toString.call(obj);
+      }
+      if (obj == null) { return (obj + '').toLowerCase(); } // implicit toString() conversion
+
+      var deepType = Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+      if (deepType === 'generatorfunction') { return 'function' }
+
+      // Prevent overspecificity (for example, [object HTMLDivElement], etc).
+      // Account for functionish Regexp (Android <=2.3), functionish <object> element (Chrome <=57, Firefox <=52), etc.
+      // String.prototype.match is universally supported.
+
+      return deepType.match(/^(array|bigint|date|error|function|generator|regexp|symbol)$/) ? deepType :
+        (typeof obj === 'object' || typeof obj === 'function') ? 'object' : typeof obj;
+    }
   </script>
 </body>
 
