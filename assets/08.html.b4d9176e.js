@@ -1,0 +1,1 @@
+const t={key:"v-643757be",path:"/ms/08.html",title:"typeof \u4E0E instanceof",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:165132235e4,contributors:[{name:"huhanchi",email:"huhanchi",commits:2}]},filePathRelative:"ms/08.md"};export{t as data};

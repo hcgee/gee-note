@@ -1,0 +1,1 @@
+const t={key:"v-67a108fc",path:"/ms/07.html",title:"Promise",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1651059618e3,contributors:[{name:"huhanchi",email:"huhanchi",commits:1}]},filePathRelative:"ms/07.md"};export{t as data};

@@ -1,0 +1,1 @@
+const t={key:"v-7547cdf4",path:"/ms/03.html",title:"call,apply \u548C bind",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1650898868e3,contributors:[{name:"huhanchi",email:"huhanchi",commits:1}]},filePathRelative:"ms/03.md"};export{t as data};
