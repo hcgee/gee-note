@@ -1,11 +1,11 @@
 ---
-home: true
-heroText: "前端学习笔记"
+# home: true
+heroText: "just do it"
 # Public 文件路径
 # heroImage: /images/hero.png
 # URL
 heroImage: https://avatars.githubusercontent.com/u/65010677?v=4
-tagline: "前端学习笔记"
+tagline: "just do it"
 # actions:
 #   - text: 学React
 #     link: /react/react
